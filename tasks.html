@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasks — OBMC Student Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="portal-wrapper">
+
+
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <div class="sidebar-logo-icon">
+        <i class="bi bi-mortarboard-fill"></i>
+      </div>
+      <div class="sidebar-logo-text">
+        OBMC Portal
+        <span>Student Access</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="sidebar-label">Main</div>
+      <a href="dashboard.html">
+        <span class="nav-icon"><i class="bi bi-speedometer2"></i></span> Dashboard
+      </a>
+      <a href="notebooks.html">
+        <span class="nav-icon"><i class="bi bi-journal-bookmark-fill"></i></span> Virtual Notebooks
+      </a>
+      <a href="tasks.html" class="active">
+        <span class="nav-icon"><i class="bi bi-check2-square"></i></span> Tasks
+      </a>
+      <a href="profile.html">
+        <span class="nav-icon"><i class="bi bi-person-circle"></i></span> Profile
+      </a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <a href="#" class="btn-logout" onclick="logoutUser()">
+        <i class="bi bi-box-arrow-left"></i> Log Out
+      </a>
+    </div>
+  </aside>
+
+  <div class="main-content">
+
+  
+    <div class="page-header">
+      <div class="page-header-badge">TASKS</div>
+      <div>
+        <div style="font-weight:600; color:#333; font-size:0.95rem;">Choose a task.</div>
+        <div class="page-header-sub">Pending activities for this quarter</div>
+      </div>
+    </div>
+
+
+    <div class="content-area">
+
+      <div class="tasks-grid">
+
+   
+        <div class="task-card" style="border-top-color: var(--accent-pink);">
+          <div class="task-subject">Mathematics</div>
+          <div class="task-name">Drill 2</div>
+          <div class="task-deadline">
+            <i class="bi bi-calendar-event me-1"></i>
+            Deadline: April 9, 2026 | 10:00 A.M.
+          </div>
+   
+          <button class="btn-task" style="background:var(--accent-pink); color:white;" onclick="takeTask('Drill Sheet 2')">
+            <i class="bi bi-pencil-fill me-1"></i> Take this activity
+          </button>
+        </div>
+
+  
+        <div class="task-card" style="border-top-color: var(--secondary-green);">
+          <div class="task-subject">Science</div>
+          <div class="task-name">Lab Activity 3</div>
+          <div class="task-deadline">
+            <i class="bi bi-calendar-event me-1"></i>
+            Deadline: April 10, 2026 | 11:00 A.M.
+          </div>
+          <button class="btn-task" style="background:var(--secondary-green); color:white;" onclick="takeTask('Lab Activity 3')">
+            <i class="bi bi-pencil-fill me-1"></i> Take this activity
+          </button>
+        </div>
+
+        <div class="task-card" style="border-top-color: var(--primary);">
+          <div class="task-subject">ICT</div>
+          <div class="task-name">Quarter Project</div>
+          <div class="task-deadline">
+            <i class="bi bi-calendar-event me-1"></i>
+            Deadline: May 8, 2026 | 2:30 P.M.
+          </div>
+          <button class="btn-task" style="background:var(--primary); color:white;" onclick="takeTask('Quarter Project')">
+            <i class="bi bi-upload me-1"></i> Submit
+          </button>
+        </div>
+
+  
+        <div class="task-card" style="border-top-color: var(--accent-cyan);">
+          <div class="task-subject">Values Education</div>
+          <div class="task-name">Minor Reflection</div>
+          <div class="task-deadline">
+            <i class="bi bi-calendar-event me-1"></i>
+            Deadline: April 22, 2026 | 8:00 A.M.
+          </div>
+          <button class="btn-task" onclick="takeTask('Film Critique')">
+            <i class="bi bi-upload me-1"></i> Submit
+          </button>
+        </div>
+
+
+        <div class="task-card" style="border-top-color: var(--secondary-yellow);">
+          <div class="task-subject">Filipino</div>
+          <div class="task-name">Drill Sheet 1</div>
+          <div class="task-deadline">
+            <i class="bi bi-calendar-event me-1"></i>
+            Deadline: April 25, 2026 | 3:00 P.M.
+          </div>
+          <button class="btn-task" style="background:var(--secondary-yellow); color:#333;" onclick="takeTask('Talaarawan 4')">
+            <i class="bi bi-file-earmark-text me-1"></i> Take this activity
+          </button>
+        </div>
+
+
+        <div class="task-card" style="border-top-color: var(--accent-dark-pink);">
+          <div class="task-subject">English</div>
+          <div class="task-name">Writing Activity 1</div>
+          <div class="task-deadline">
+            <i class="bi bi-calendar-event me-1"></i>
+            Deadline: April 28, 2026 | 10:00 A.M.
+          </div>
+          <button class="btn-task" style="background:var(--accent-dark-pink); color:white;" onclick="takeTask('Reading Comprehension 5')">
+            <i class="bi bi-pencil-fill me-1"></i> Take this activity
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="proj.js"></script>
+<script>
+  checkSession();
+</script>
+
+</body>
+</html>
